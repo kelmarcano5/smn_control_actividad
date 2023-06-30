@@ -1,27 +1,46 @@
 <html>
 <head>
 <title>System Error</title>
-<LINK REL="stylesheet" type="text/css" href="${def:context}/default.css" />
+	<!-- <LINK REL="stylesheet" type="text/css" href="${def:context}/default.css" /> -->
+	<link rel="stylesheet" type="text/css" href="${def:context}/dinamica_bkp.css" />
+	<link rel="stylesheet" type="text/css" href="${def:context}/main.css" />
+	<link rel="stylesheet" type="text/css" href="${def:context}/select2.min.css" />
+	<!--biblioteca generica JS/Dinamica-->
+	<script type="text/javascript" src="${def:context}/action/script"></script>
+	<script type="text/javascript" src="${def:context}/action/jquery"></script>
+	<script type="text/javascript" src="${def:context}/action/select2"></script>
 </head>
 
 <body>
-
+	<!--banner-->
+<div class="bannerDialog" id="encabezado_tabla">
+	Notificaci&oacuten
+	<img src="${def:context}/images/close.png" class="button" onclick="parent.closeDialog(); parent.search();" title="${lbl:b_close_button}" style="float:right; cursor:pointer;">
+	<!-- ${req:progress} -->
+</div>
 <center>
 
-<h2 style="color: red">${lbl:system_error_title}</h2>
+<h2 style="color: red">Notificaci&oacuten</h2>
 
-<div class="alert" style="width: 60%">${lbl:system_error_msg}</div>
+<img src="${def:context}/images/warning2.png" alt="" width="200px" height="200px">
 
+<!-- <div class="alert" style="width: 60%">${lbl:system_error_msg}</div> -->
+<h3>Estimado usuario el proceso no ha sido ejecutado por favor verifique su configuraci&oacuten de sistema</h3>
 <!--remove this if you don't want to see the stacktrace-->
-<h3>Stack trace:</h3>
-<textarea cols="60" rows="10">${req:dinamica.error.stacktrace}</textarea>
+<!-- <h3>Stack trace:</h3> -->
+<!-- <textarea cols="60" rows="10" id="stack">Por favor verifique su configuracion de sistema</textarea> -->
+<!-- <textarea cols="60" rows="10">${req:dinamica.error.stacktrace}</textarea> -->
 
 
 <br>
 <br>
-<button onclick="goBack();">${lbl:button_back}</button>
+<!-- <button onclick="goBack();">${lbl:button_back}</button> -->
 
 <script language="javascript">
+
+	onload = function(){
+		console.log("traza de error ${req:dinamica.error.stacktrace}");
+	}
 	
 	if (parent!=null) {
 		if (this.name=="uploadFrame")

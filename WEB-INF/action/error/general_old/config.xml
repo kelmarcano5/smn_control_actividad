@@ -14,13 +14,6 @@
 		<jdbc-log>false</jdbc-log>
 	</transaction>
 
-    <!-- <output>
-		<classname>dinamica.GenericOutput</classname>
-		<template>script.js</template>
-		<set-http-headers>true</set-http-headers>
-		<content-type>text/javascript</content-type>
-		<expiration>0</expiration>
-	</output> -->
 	<output>
 		<classname>dinamica.GenericOutput</classname>
 		<template>message.htm</template>

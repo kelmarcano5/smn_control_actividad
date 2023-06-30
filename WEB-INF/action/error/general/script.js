@@ -1,0 +1,1 @@
+showMessage('${lbl:system_error_title}', '${req:dinamica.error.stacktrace}', 'warning');
